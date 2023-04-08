@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-staging
+  namespace: nk-tolmin
+  labels:
+    app: web-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-staging
+  template:
+    metadata:
+      labels:
+        app: web-staging
+    spec:
+      containers:
+      - name: web-staging
+        image: localhost:32000/nk-tolmin/web:staging
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: "1"
+        volumeMounts:
+        - mountPath: /etc/nginx/conf.d/default.conf
+          subPath: default.conf
+          readOnly: true
+          name: spa-nginx-config
+        - mountPath: /usr/share/nginx/html/assets
+          name: assets-all
+      volumes:
+      - name: spa-nginx-config
+        configMap:
+          name: spa-nginx-config
+      - name: assets-all
+        hostPath:
+          path: /opt/vino-skerjanec/staging/assets
+          type: Directory

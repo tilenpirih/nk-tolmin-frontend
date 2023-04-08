@@ -1,0 +1,44 @@
+.dropdownActivated .dropdownIcon {
+  transform: rotate(-180deg);
+  color: var(--v-primary-lighten1) !important;
+}
+.tabButton {
+  width: 100% !important;
+  height: 100% !important;
+}
+.tabButton:hover {
+  color: white !important;
+}
+.v-ripple__container {
+  display: none !important;
+}
+.v-list-item {
+  color: rgba(255, 255, 255, 0.6) !important;
+  // > .v-list-item__icon > .v-icon{
+  //   color: rgba(255, 255, 255, 0.6) !important;
+  // }
+}
+.v-list-item:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
+.v-list-item--active {
+  color: rgba(255, 255, 255, 1) !important;
+}
+.dropdownIconActive {
+  transform: rotate(-180deg);
+  color: var(--v-primary-lighten1) !important;
+}
+
+.fullHeight {
+  height: 100% !important;
+}
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+// figue out why this is not working globally
+.overflowEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
