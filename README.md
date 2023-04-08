@@ -1,6 +1,6 @@
 # NK TOLMIN - Frontend
 
-!!! THE NEWEST VERSION OF THIS IS HOSTED ON PRIVATE GITLAB SERVER. I CLONED THE REPO TO MY PRIVATE GITHUB PROFILE TO SERVE AS A REFERENCE TO "MY WORK".
+!!! The latest version of this repository is now hosted on a private GitLab server. As a reference to my work, I have cloned the repository to my personal GitHub profile.
 
 ## Project setup
 ```
